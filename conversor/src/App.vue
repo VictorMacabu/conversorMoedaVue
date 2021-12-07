@@ -17,6 +17,13 @@ export default {
 </script>
 
 <style>
+body{
+  text-align: center;
+  background-color: blueviolet;
+}
+h1{
+  color: #fff;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,5 +32,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
   display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="conversor">
-    <h2>
+    <h3>
       De:
       <select v-model="selected1" value="Moeda 1">
         <option>USD</option>
@@ -19,7 +19,7 @@
         <option>CAD</option>
         <option>BRL</option>
       </select>
-    </h2>
+    </h3>
     <input type="text" v-model="moeda1_value" v-bind:placeholder="selected1" />
     <input type="button" value="Converter" v-on:click="converter" />
     <h2>{{ moeda2_value }}</h2>
@@ -66,5 +66,6 @@ export default {
   max-width: 400px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  background-color: #ffffff5e;
 }
 </style>
