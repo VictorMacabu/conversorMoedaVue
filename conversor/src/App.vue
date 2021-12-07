@@ -1,5 +1,6 @@
 <template>  
   <div id="app">
+    <h1>Conversor de Moedas</h1>
       <Conversor moeda1="{{selected1}}" moeda2="{{selected2}}"/>
   </div>
 </template>
@@ -23,5 +24,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: inline-flex;
 }
 </style>

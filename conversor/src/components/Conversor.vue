@@ -1,21 +1,24 @@
 <template>
   <div class="conversor">
     <h2>
+      De:
       <select v-model="selected1" value="Moeda 1">
-  <option>USD</option>
-  <option>BTC</option>
-  <option>EUR</option>
-  <option>GBP</option>
-  <option>BRL</option>
-</select>
-      Para 
+        <option>USD</option>
+        <option>BTC</option>
+        <option>EUR</option>
+        <option>GBP</option>
+        <option>CAD</option>
+        <option>BRL</option>
+      </select>
+      Para:
       <select v-model="selected2" value="Moeda 2">
-  <option>USD</option>
-  <option>BTC</option>
-  <option>EUR</option>
-  <option>GBP</option>
-  <option>BRL</option>
-</select>
+        <option>USD</option>
+        <option>BTC</option>
+        <option>EUR</option>
+        <option>GBP</option>
+        <option>CAD</option>
+        <option>BRL</option>
+      </select>
     </h2>
     <input type="text" v-model="moeda1_value" v-bind:placeholder="selected1" />
     <input type="button" value="Converter" v-on:click="converter" />
@@ -26,9 +29,7 @@
 <script>
 export default {
   data() {
-
-  return {
-      
+    return {
       moeda1_value: "",
       moeda2_value: 0,
     };
@@ -47,7 +48,6 @@ export default {
         })
         .then((json) => {
           let cotacao = json[de_para];
-          parseFloat(cotacao);
           console.log(cotacao);
 
           this.moeda2_value = (cotacao * parseFloat(this.moeda1_value)).toFixed(
@@ -60,4 +60,11 @@ export default {
 </script>
 
 <style scoped>
+.conversor {
+  text-align: left;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
 </style>
